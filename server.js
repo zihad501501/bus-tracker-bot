@@ -124,5 +124,7 @@ app.get('/', (req, res) => {
     lastUpdate: latestLocation.timestamp || 'Never',
   });
 });
-
+app.get('/track', (req, res) => {
+  res.redirect('/');
+});
 app.listen(CONFIG.PORT, () => console.log(`🤖 Bot running on port ${CONFIG.PORT}`));
